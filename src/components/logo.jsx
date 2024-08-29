@@ -1,7 +1,9 @@
+import logo from "../assets/react_web_logo.png"
+
 function Logo({ width }) {
     return <img
         className={width}
-        src="../../public/react_web_logo.png"
+        src={logo}
         alt="logo" />;
 }
 

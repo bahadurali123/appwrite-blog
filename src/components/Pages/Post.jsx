@@ -14,7 +14,7 @@ export default function Post() {
 
     const userData = useSelector((state) => state.auth.userData);
     const posts = useSelector(state => state.posts.postsData);
-    console.log("Posts data: ", posts);
+    // console.log("Posts data: ", posts);
     const postIs = posts.filter(post => post.$id === slug);
     const post = postIs[0];
     // console.log("Post data: ", post, slug, postIs, post);

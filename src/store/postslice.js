@@ -23,18 +23,18 @@ const postsSlice = createSlice({
         },
 
         addPostReducer: (state, action) => {
-            console.log("Post Reducer: ", action.payload);
+            // console.log("Post Reducer: ", action.payload);
             state.status = 'succeeded';
             state.postsData.push(action.payload);
         },
         updatePostReducer: (state, action) => {
-            console.log("Post Updated Reducer: ", action.payload);
+            // console.log("Post Updated Reducer: ", action.payload);
             const { title, $id, content, featuredimage, status, userid } = action.payload;
             state.status = 'succeeded';
             state.postsData = state.postsData.map(post => post.$id == $id ? { ...post, title, $id, content, featuredimage, status, userid } : post);
         },
         deletePostReducer: (state, action) => {
-            console.log("Delete Post Reducer: ", action.payload);
+            // console.log("Delete Post Reducer: ", action.payload);
             state.status = 'succeeded';
             state.postsData = state.postsData.filter(post => post.$id !== action.payload)
         },

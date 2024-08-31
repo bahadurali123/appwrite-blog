@@ -10,7 +10,7 @@ function PostForm({ post }) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    console.log("Post in Post form", post)
+    // console.log("Post in Post form", post)
 
     // register: is used to connect input elements with the form.
     // handleSubmit: handles form submission and provides the form data to the onSubmit function.
@@ -130,8 +130,8 @@ function PostForm({ post }) {
                     </div>
                 )}
                 <Select
+                    label="Status :"
                     options={["active", "inactive"]}
-                    label="Status"
                     className="mb-4"
                     {...register("status", { required: true })}
                 />

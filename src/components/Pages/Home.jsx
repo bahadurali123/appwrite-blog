@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 function Home() {
     const authStatus = useSelector(state => state.auth.status);
     let { status, postsData, error } = useSelector(state => state.posts);
-    postsData = postsData.slice(0, 3);
+    postsData = postsData.slice(0, 6);
 
     // console.log("Status: ", status, postsData, error, authStatus)
 
